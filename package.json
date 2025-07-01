@@ -1,0 +1,30 @@
+{
+  "name": "pw-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "codegen": "playwright codegen",
+    "ui": "npx playwright test --ui",
+    "chromium": "npx playwright test --project=chromium --headed",
+    "show-report": "npx playwright show-report",
+    "prod": "playwright test --config=playwright-prod.config.ts",
+    "local": "ENV=local playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.27",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "dotenv": "^16.6.0",
+    "eslint": "^9.29.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.1",
+    "zod": "^3.25.67"
+  }
+}

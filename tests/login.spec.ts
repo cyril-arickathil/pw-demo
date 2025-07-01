@@ -1,0 +1,10 @@
+import { test, expect } from '@playwright/test';
+
+test('check login is successfully', async ({ page }) => {
+  await page.goto('https://practicesoftwaretesting.com/');
+  await page.getByTestId("nav-sign-in").click();
+  await page.locator('[data-test="email"]').fill('customer2@practicesoftwaretesting.com');
+  await page.locator('[data-test="password"]').fill('welcome01');
+  await page.locator('[data-test="login-submit"]').click();
+  await expect(page.locator('[data-test="nav-menu"]')).toContainText('Jack Howe');
+});
