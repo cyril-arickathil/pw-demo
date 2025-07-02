@@ -10,7 +10,8 @@
     "chromium": "npx playwright test --project=chromium --headed",
     "show-report": "npx playwright show-report",
     "prod": "playwright test --config=playwright-prod.config.ts",
-    "local": "ENV=local playwright test"
+    "local": "ENV=local playwright test tests/handlingEnv.spec.ts --headed",
+    "v1": "ENV=v1 playwright test tests/handlingEnv.spec.ts"
   },
   "keywords": [],
   "author": "",
