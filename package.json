@@ -11,7 +11,10 @@
     "show-report": "npx playwright show-report",
     "prod": "playwright test --config=playwright-prod.config.ts",
     "local": "ENV=local playwright test tests/handlingEnv.spec.ts --headed",
-    "v1": "ENV=v1 playwright test tests/handlingEnv.spec.ts"
+    "v1": "ENV=v1 playwright test tests/handlingEnv.spec.ts",
+    "allure": "playwright test --reporter=line,allure-playwright",
+    "allure-generate": "allure generate allure-results -o allure-report --clean",
+    "allure-open": "allure open allure-report"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +25,8 @@
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.27",
     "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.3.0",
     "dotenv": "^16.6.0",
     "eslint": "^9.29.0",
     "typescript": "^5.8.3",
